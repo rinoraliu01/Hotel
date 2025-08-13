@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/',[AdminController::class, 'home']);
 
@@ -29,19 +30,33 @@ Route::post(
     '/add_room',
     [AdminController::class, 'add_room']
 )->name('add_room');
+
 Route::get(
     '/view_rooms',
     [AdminController::class, 'view_rooms']
 )->name('view_rooms');
+
 Route::get(
     '/room_delete/{id}',
     [AdminController::class, 'room_delete']
 )->name('room_delete');
+
 Route::get(
     '/room_update/{id}',
     [AdminController::class, 'room_update']
 )->name('room_update');
+
 Route::post(
     '/edit_room/{id}',
     [AdminController::class, 'edit_room']
 )->name('edit_room');
+
+Route::get(
+    '/room_details/{id}',
+    [HomeController::class, 'room_details']
+)->name('room_details');
+
+Route::post(
+    '/add_booking/{id}',
+    [HomeController::class, 'add_booking']
+)->name('add_booking');

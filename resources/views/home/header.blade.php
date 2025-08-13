@@ -6,7 +6,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html" style="text-decoration: none; font-size: 28px; font-weight:400; font-style:italic; color: black;">Hotel</a>
+                              <a href="{{url('/')}}" style="text-decoration: none; font-size: 28px; font-weight:400; font-style:italic; color: black;">Hotel</a>
                            </div>
                         </div>
                      </div>
@@ -19,7 +19,7 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="index.html">Home</a>
+                                 <a class="nav-link" href="{{url('/')}}">Home</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="about.html">About</a>
@@ -38,7 +38,6 @@
                               </li>
 
                                  @if (Route::has('login'))
-                                    <nav class="flex items-center justify-end gap-4">
                                         @auth
                                             <x-app-layout>
                                             </x-app-layout>
@@ -53,7 +52,6 @@
                                                 </li>
                                             @endif
                                         @endauth
-                                    </nav>
                                 @endif
                            </ul>
                         </div>

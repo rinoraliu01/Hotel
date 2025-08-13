@@ -24,7 +24,7 @@
                         </div>
                     @endif
             <table class="table table-bordered">
-                <tr class="table-primary">
+                <tr class="table-light">
                     <th>Room Title</th>
                     <th>Description</th>
                     <th>Price</th>
@@ -36,7 +36,7 @@
                 </tr>
                 @foreach ($rooms as $room )
 
-               <tr>
+               <tr class="">
                 <td>
                     {{ $room->room_title }}
                 </td>
@@ -56,10 +56,10 @@
                     <img src="{{ asset('room/'.$room->image) }}" alt="Room Image" class="img-fluid" style="width: 100px; height: 100px;">
                 </td>
                 <td>
-                    <a onclick="return confirm('Are you sure you want to delete this room?');" href="{{ url('room_delete', $room->id) }}" class="btn btn-danger">Delete</a>
+                    <a onclick="return confirm('Are you sure you want to delete this room?');" href="{{ url('room_delete', $room->id) }}" class="btn btn-outline-danger">Delete</a>
                 </td>
                 <td>
-                    <a href="{{url('room_update', $room->id)}}" class="btn btn-warning">Edit</a>
+                    <a href="{{url('room_update', $room->id)}}" class="btn btn-outline-warning">Edit</a>
                 </td>
                 </tr>
                  @endforeach
