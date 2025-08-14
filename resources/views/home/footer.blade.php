@@ -41,9 +41,7 @@
                   <div class="row">
                      <div class="col-md-10 offset-md-1">
 
-                        <p>
-                        © 2025 All Rights Reserved.
-                        </p>
+                        <p class="no-margin-bottom">{{ date('Y') }} &copy; Hotel. All Rights Reserved.</p>
 
                      </div>
                   </div>
