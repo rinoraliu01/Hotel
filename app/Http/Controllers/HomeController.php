@@ -11,13 +11,44 @@ use App\Models\Contact;
 class HomeController extends Controller
 {
 
+        /**
+     * Show the "Our Rooms" page.
+     */
+    public function our_rooms()
+    {
+        $room = Room::all();
+        return view('home.our_rooms', compact('room'));
+    }
 
+    /**
+     * Show the "Hotel Gallery" page.
+     */
+    public function hotel_gallery()
+    {
+        $gallary = Gallary::all();
+        return view('home.hotel_gallery', compact('gallary'));
+    }
+
+    /**
+     * Show the "Hotel Contact" page.
+     */
+    public function hotel_contact()
+    {
+        return view('home.hotel_contact');
+    }
+
+    /**
+     * Show the details of a specific room.
+     */
     public function room_details($id)
     {
         $room = Room::findOrFail($id);
         return view('home.room_details', compact('room'));
     }
 
+    /**
+     * Handle the booking of a room.
+     */
     public function add_booking(Request $request, $id)
     {
 
@@ -80,4 +111,6 @@ class HomeController extends Controller
 
         return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
+
+
 }

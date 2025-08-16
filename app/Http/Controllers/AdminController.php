@@ -48,12 +48,14 @@ class AdminController extends Controller
         return view('home.index', compact('room', 'gallary'));
     }
 
+
+
+
     // Show the create room form
     public function create_room()
     {
         return view('admin.create_room');
     }
-
     // Handle the room creation logic
     public function add_room(Request $request)
     {
@@ -87,14 +89,12 @@ class AdminController extends Controller
 
         return redirect()->back()->with('success', 'Room created successfully');
     }
-
     // Show the view rooms page
     public function view_rooms()
     {
         $rooms = Room::all();
         return view('admin.view_rooms', compact('rooms'));
     }
-
     // Handle the room deletion logic
     public function room_delete($id)
     {
@@ -105,14 +105,12 @@ class AdminController extends Controller
         }
         return redirect()->back()->with('error', 'Room not found');
     }
-
     // Show the room update form
     public function room_update($id)
     {
         $room = Room::findOrFail($id);
         return view('admin.room_update', compact('room'));
     }
-
     // Handle the room update logic
     public function edit_room($id)
     {
@@ -152,13 +150,15 @@ class AdminController extends Controller
         return redirect()->route('view_rooms')->with('success', 'Room updated successfully');
     }
 
+
+
+
     // View all bookings
     public function bookings()
     {
         $bookings = Booking::all();
         return view('admin.booking', compact('bookings'));
     }
-
     // Handle the booking deletion logic
     public function delete_booking($id)
     {
@@ -169,7 +169,6 @@ class AdminController extends Controller
         }
         return redirect()->back()->with('error', 'Booking not found');
     }
-
     // Handle the booking approval logic
     public function approve_booking($id)
     {
@@ -181,7 +180,6 @@ class AdminController extends Controller
         }
         return redirect()->back()->with('error', 'Booking not found');
     }
-
     // Handle the booking rejection logic
     public function reject_booking($id)
     {
@@ -194,13 +192,15 @@ class AdminController extends Controller
         return redirect()->back()->with('error', 'Booking not found');
     }
 
+
+
+
     // View the gallery
     public function view_gallary()
     {
         $gallary = Gallary::all();
         return view('admin.gallary', compact('gallary'));
     }
-
     // Handle the add gallery logic
     public function add_gallery(Request $request)
     {
@@ -218,7 +218,6 @@ class AdminController extends Controller
 
         return redirect()->back()->with('success', 'Image added to gallery successfully');
     }
-
     // Handle the delete gallery logic
     public function delete_gallery($id)
     {
@@ -230,20 +229,20 @@ class AdminController extends Controller
         return redirect()->back()->with('error', 'Image not found');
     }
 
+
+
     // View messages
     public function messages()
     {
         $messages = Contact::all();
         return view('admin.messages', compact('messages'));
     }
-
     // View mails
     public function send_mail($id)
     {
         $message = Contact::findOrFail($id);
         return view('admin.send_mail', compact('message'));
     }
-
     // Handle the mail sending logic
     public function mail(Request $request, $id)
     {
@@ -260,4 +259,7 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Mail sent successfully');
 
     }
+
+
+
 }

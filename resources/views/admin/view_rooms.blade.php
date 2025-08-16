@@ -23,7 +23,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     @endif
-            <table class="table table-bordered">
+            <table class="table table-striped">
                 <tr class="table-light">
                     <th>Room Title</th>
                     <th>Description</th>

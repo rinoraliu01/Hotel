@@ -24,7 +24,7 @@
                         </div>
                 @endif
             <div class="table-responsive">
-             <table class="table table-bordered table-sm">
+             <table class="table table-striped  table-sm">
                 <tr class="table-light">
                     <th>Room ID</th>
                     <th>Customer Name</th>

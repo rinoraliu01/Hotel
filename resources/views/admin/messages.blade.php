@@ -20,7 +20,7 @@
                     {{ session('error') }}
                 </div>
             @endif
-            <table class="table table-bordered table-small">
+            <table class="table table-striped table-small">
                 <tr class="table-light">
                     <th>Name</th>
                     <th>Email</th>
