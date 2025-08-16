@@ -59,3 +59,50 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+<p align="center">
+    <a href="https://laravel.com" target="_blank">
+        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    </a>
+</p>
+
+---
+
+# 🏨 Hotel Management System (Laravel)
+
+A hotel management web application built with **Laravel (latest)**, **Jetstream**, **Bootstrap**, **JavaScript**, and **MySQL**.  
+It provides both an admin dashboard and a frontend for users to browse rooms, make bookings, and send inquiries.
+
+---
+
+## 🚀 Features
+
+- ✅ **Room Management (CRUD)** – add, edit, delete rooms with details & pricing  
+- ✅ **Booking System** – create and manage bookings with **availability check**  
+- ✅ **Gallery** – upload and manage hotel images  
+- ✅ **Contact Messaging** – users can send messages via contact form  
+- ✅ **Mail Sending** – email notifications integrated (SMTP)  
+- ✅ **Authentication** – login, registration, and role-based access using **Laravel Jetstream**  
+- ✅ **Admin Dashboard** – secure admin panel with middleware protection  
+- ✅ **Frontend Integration** – homepage with room listing and booking functionality  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Laravel** (latest)  
+- **Jetstream** (Auth, Roles, Sessions)  
+- **Bootstrap 5** (frontend styling)  
+- **JavaScript** (frontend interactions)  
+- **MySQL** (database)  
+
+---
+
+## ⚙️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/yourproject.git
+   cd yourproject
